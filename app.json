@@ -1,28 +1,27 @@
 {
   "expo": {
-    "name": "iahsidhaid",
-    "slug": "iahsidhaid",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
-    "version": "1.0.0",
+    "name": "News",
+    "slug": "news",
+    "platforms": ["ios", "android", "web"],
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#F7B543"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.elektrogames.news",
+      "versionCode": 1,
+      "permissions": []
     }
   }
 }

@@ -2,15 +2,14 @@ import Axios from "axios"
 
 export var getHeadLines = () => {
   return async (dis) => {
+    var output = await Axios({
+      baseURL: "https://newsapi.org/v2/top-headlines/",
+      params: {
+        country: "in",
+        apiKey: "",
+      },
+    })
     try {
-      var output = await Axios({
-        baseURL: "https://newsapi.org/v2/top-headlines/",
-        params: {
-          country: "in",
-          apiKey: "",
-        },
-      })
-
       dis({ type: "HEAD_LINES", payload: output.data.articles })
     } catch (error) {
       console.log(error)
@@ -20,16 +19,15 @@ export var getHeadLines = () => {
 
 export var getCat = (cat) => {
   return async (dis) => {
+    var output = await Axios({
+      baseURL: "https://newsapi.org/v2/top-headlines/",
+      params: {
+        country: "in",
+        apiKey: "",
+        category: cat,
+      },
+    })
     try {
-      var output = await Axios({
-        baseURL: "https://newsapi.org/v2/top-headlines/",
-        params: {
-          country: "in",
-          apiKey: "",
-          category: cat,
-        },
-      })
-
       dis({ type: "CATEGORY", payload: output.data.articles })
     } catch (error) {
       console.log(error)
